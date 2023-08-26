@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passcraft</title>
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="dark">
+    <section id="top">
+        <span class="logoContainer">
+            <img src="./res/logo-no-background.png" alt="Passcraft">
+        </span>
+        <span id="topLeft">
+            <!--
+                <p class="svgLink"><img class="svg-icon" src="./res/gear-solid.svg" alt=""></p>
+            -->
+            <div id="themeSelector">
+                <input type="checkbox" name="theme" id="themeSelectorCheckbox">
+                <span class="slider"></span>
+                <span class="icon"><img class="svg-icon active" id="sunIcon" src="./res/sun-solid.svg" alt=""></span>
+                <span class="icon"><img class="svg-icon" id="moonIcon" src="./res/moon-solid.svg" alt=""></span>
+            </div>
+        </span>
+    </section>
+    <section id="passwordOptions">
+        <div id="sliderLength">
+            <input type="number" min="0" max="50" name="length" id="lengthInput" />
+            <input type="range" name="lengthSlider" id="lengthSlider" value="16" min="0" max="50">
+        </div>
+        <div id="letterOptions">
+            <div class="letterOption">
+                <input type="checkbox" name="lowercase" id="lowercase" />
+                <label for="lowercase">a-z</label>
+            </div>
+            <div class="letterOption">
+                <input type="checkbox" name="uppercase" id="uppercase" />
+                <label for="uppercase">A-Z</label>
+            </div>
+            <div class="letterOption">
+                <input type="checkbox" name="numbers" id="numbers" />
+                <label for="numbers">0-9</label>
+            </div>
+            <div class="letterOption">
+                <input type="checkbox" name="symbols" id="symbols" />
+                <label for="symbols">!#$</label>
+            </div>
+        </div>
+    </section>
+    <section id="lower">
+        <div id="passwordOutput">
+            <input type="text" readonly id="passwordOutputText"></input>
+            <span id="strengthIndicator"></span>
+        </div>
+        <div id="buttons">
+            <span class="svg-icon" id="copyButton">
+                <img src="./res/copy-regular.svg" alt="Copy">
+                <p id="copyButtonText">Copied!</p>
+            </span>
+            <span class="svg-icon" id="resetButton"><img src="./res/rotate-left-solid.svg" alt="Reset"></span>
+        </div>
+    </section>
+</body>
+<script src="./js/main.js"></script>
+</html>

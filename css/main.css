@@ -1,0 +1,117 @@
+#passwordOptions #sliderLength {
+  display: flex;
+}
+#passwordOptions #sliderLength input[type=number] {
+  width: 3ch;
+  margin-right: 6px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+}
+#passwordOptions #sliderLength input[type=number]::-webkit-outer-spin-button, #passwordOptions #sliderLength input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#passwordOptions #sliderLength input[type=range] {
+  margin: auto 0;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  outline: none;
+  border-radius: 2px;
+}
+#passwordOptions #sliderLength input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: var(--text);
+  cursor: pointer;
+  border-radius: 50%;
+}
+#passwordOptions #letterOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#passwordOptions #letterOptions .letterOption input {
+  background-color: var(--text);
+  cursor: pointer;
+  outline: none;
+}
+#passwordOptions #letterOptions .letterOption label {
+  font-size: 12px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+#lower #passwordOutput {
+  padding: 0 2px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  margin: 10px 0;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+#lower #passwordOutput input {
+  white-space: unset;
+  padding: 4px 0;
+  width: 100%;
+  font-weight: 600;
+}
+#lower #passwordOutput #strengthIndicator {
+  height: 3px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#lower #buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#lower #buttons span {
+  cursor: pointer;
+}
+#lower #buttons #copyButton {
+  position: relative;
+}
+#lower #buttons #copyButton p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  color: var(--text);
+  background-color: var(--background);
+  font-family: 110%;
+  font-weight: 600;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+#lower #buttons #resetButton.resetButtonTextAnimation {
+  animation: rotateShake 0.2s ease-in-out;
+}
+
+.light #lower #passwordOutput {
+  border: 1px solid var(--border);
+}
+
+@keyframes rotateShake {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}/*# sourceMappingURL=main.css.map */
